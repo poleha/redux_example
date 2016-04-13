@@ -2,13 +2,14 @@ import { createStore, applyMiddleware } from 'redux'
 import rootReducer from '../reducers'
 import { ping } from './enhancers/ping' // <!-- подключаем наш enhancer
 import createLogger from 'redux-logger'
+import thunk from 'redux-thunk';
 
 export default function configureStore(initialState) {
   const logger = createLogger();
   const store = createStore(
       rootReducer,
       initialState,
-      applyMiddleware(logger, ping));
+      applyMiddleware(logger, ping, thunk));
 
   //A store holds the whole state tree of your application.
   //The only way to change the state inside it is to dispatch an action on it.
