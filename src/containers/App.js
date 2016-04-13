@@ -32,6 +32,8 @@ function mapDispatchToProps(dispatch) {
     pageActions: bindActionCreators(pageActions, dispatch)
     //we bind Action Creator to dispatch http://redux.js.org/docs/Glossary.html#action-creator
     //this created action is immediately dispatched
+    //Вместо этого мы можем передавать store во все компоненты, начиная с App, при нажатии на кнопку генерировать
+    //action и this.props.store.dispatch(action);
   }
 }
 
