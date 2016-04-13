@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>App-compiled.js.map</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,0); }
+.s1 { color: rgb(0,128,0); font-weight: bold; }
+.s2 { color: rgb(0,0,0); }
+.s3 { color: rgb(0,0,255); }
+.s4 { color: rgb(0,0,128); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+App-compiled.js.map</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<a name="l1"><span class="ln">1    </span></a><span class="s0">{</span><span class="s1">&quot;version&quot;</span><span class="s2">:</span><span class="s3">3</span><span class="s2">,</span><span class="s1">&quot;sources&quot;</span><span class="s2">:</span><span class="s0">[</span><span class="s1">&quot;App.js&quot;</span><span class="s0">]</span><span class="s2">,</span><span class="s1">&quot;names&quot;</span><span class="s2">:</span><span class="s0">[]</span><span class="s2">,</span><span class="s1">&quot;mappings&quot;</span><span class="s2">:</span><span class="s1">&quot;;;;;;;;;AAAA;;;;AACA;;AACA;;AACA;;;;AACA;;;;AACA;;IAAY;;;;;;;;;;;;IAEN;;;;;;;;;;;6BACK;mBACgB,KAAK,KAAL,CADhB;UACC,mBADD;UACO,mBADP;UAEC,UAAY,KAAK,KAAL,CAAW,WAAX,CAAZ,QAFD;;;AAIP,aAAO;;;QACL,gDAAM,MAAM,KAAK,IAAL,EAAZ,CADK;QAEL,gDAAM,QAAQ,KAAK,MAAL,EAAa,MAAM,KAAK,IAAL,EAAW,SAAS,OAAT,EAA5C,CAFK;OAAP,CAJO;;;;SADL;;;;;;AAaN,SAAS,eAAT,CAAyB,KAAzB,EAAgC;AAC9B,SAAO;AACL,UAAM,MAAM,IAAN;AACN,UAAM,MAAM,IAAN;GAFR,CAD8B;CAAhC;;AASA,SAAS,kBAAT,CAA4B,QAA5B,EAAsC;AACpC,SAAO;AACL,iBAAa,+BAAmB,WAAnB,EAAgC,QAAhC,CAAb;;;AADK,GAAP,CADoC;CAAtC;;kBAUe,yBAAQ,eAAR,EAAyB,kBAAzB,EAA6C,GAA7C&quot;</span><span class="s2">,</span><span class="s1">&quot;file&quot;</span><span class="s2">:</span><span class="s1">&quot;App-compiled.js&quot;</span><span class="s2">,</span><span class="s1">&quot;sourcesContent&quot;</span><span class="s2">:</span><span class="s0">[</span><span class="s1">&quot;import React, { Component } from 'react'</span><span class="s4">\n</span><span class="s1">import { bindActionCreators } from 'redux'</span><span class="s4">\n</span><span class="s1">import { connect } from 'react-redux'</span><span class="s4">\n</span><span class="s1">import User from '../components/User'</span><span class="s4">\n</span><span class="s1">import Page from '../components/Page'</span><span class="s4">\n</span><span class="s1">import * as pageActions from '../actions/PageActions'</span><span class="s4">\n\n</span><span class="s1">class App extends Component {</span><span class="s4">\n</span><span class="s1">  render() {</span><span class="s4">\n</span><span class="s1">    const { user, page } = this.props;</span><span class="s4">\n</span><span class="s1">    const { setYear } = this.props.pageActions;</span><span class="s4">\n\n</span><span class="s1">    return &lt;div&gt;</span><span class="s4">\n</span><span class="s1">      &lt;User name={user.name} /&gt;</span><span class="s4">\n</span><span class="s1">      &lt;Page photos={page.photos} year={page.year} setYear={setYear} /&gt;</span><span class="s4">\n</span><span class="s1">    &lt;/div&gt;</span><span class="s4">\n</span><span class="s1">  }</span><span class="s4">\n</span><span class="s1">}</span><span class="s4">\n\n</span><span class="s1">//Устанавливаем соответствие глобального state props каждого компонента</span><span class="s4">\n</span><span class="s1">function mapStateToProps(state) {</span><span class="s4">\n</span><span class="s1">  return {</span><span class="s4">\n</span><span class="s1">    user: state.user,</span><span class="s4">\n</span><span class="s1">    page: state.page</span><span class="s4">\n</span><span class="s1">  }</span><span class="s4">\n</span><span class="s1">}</span><span class="s4">\n\n\n\n</span><span class="s1">function mapDispatchToProps(dispatch) {</span><span class="s4">\n</span><span class="s1">  return {</span><span class="s4">\n</span><span class="s1">    pageActions: bindActionCreators(pageActions, dispatch)</span><span class="s4">\n</span><span class="s1">    //we bind Action Creator to dispatch http://redux.js.org/docs/Glossary.html#action-creator</span><span class="s4">\n</span><span class="s1">    //this created action is immediately dispatched</span><span class="s4">\n</span><span class="s1">  }</span><span class="s4">\n</span><span class="s1">}</span><span class="s4">\n\n\n\n</span><span class="s1">export default connect(mapStateToProps, mapDispatchToProps)(App)</span><span class="s4">\n</span><span class="s1">&quot;</span><span class="s0">]}</span></pre>
+</body>
+</html>

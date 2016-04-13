@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>configureStore-compiled.js.map</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,0); }
+.s1 { color: rgb(0,128,0); font-weight: bold; }
+.s2 { color: rgb(0,0,0); }
+.s3 { color: rgb(0,0,255); }
+.s4 { color: rgb(0,0,128); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+configureStore-compiled.js.map</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<a name="l1"><span class="ln">1    </span></a><span class="s0">{</span><span class="s1">&quot;version&quot;</span><span class="s2">:</span><span class="s3">3</span><span class="s2">,</span><span class="s1">&quot;sources&quot;</span><span class="s2">:</span><span class="s0">[</span><span class="s1">&quot;configureStore.js&quot;</span><span class="s0">]</span><span class="s2">,</span><span class="s1">&quot;names&quot;</span><span class="s2">:</span><span class="s0">[]</span><span class="s2">,</span><span class="s1">&quot;mappings&quot;</span><span class="s2">:</span><span class="s1">&quot;;;;;;kBAKwB;;AALxB;;AACA;;;;AACA;;AACA;;;;;;AAEe,SAAS,cAAT,CAAwB,YAAxB,EAAsC;AACnD,MAAM,SAAS,4BAAT,CAD6C;AAEnD,MAAM,QAAQ,4CAEV,YAFU,EAGV,uCAHU;AAIV,8BAAgB,MAAhB,CAJU,CAAR;;;;;;;;;;;;;;;AAF6C,MAqB/C,OAAO,GAAP,EAAY;AACd,WAAO,GAAP,CAAW,MAAX,CAAkB,aAAlB,EAAiC,YAAM;;AACrC,UAAM,kBAAkB,QAAQ,aAAR,CAAlB,CAD+B;AAErC,YAAM,cAAN,CAAqB,eAArB,EAFqC;KAAN,CAAjC,CADc;GAAhB;;AAOA,SAAO,KAAP,CA5BmD;CAAtC&quot;</span><span class="s2">,</span><span class="s1">&quot;file&quot;</span><span class="s2">:</span><span class="s1">&quot;configureStore-compiled.js&quot;</span><span class="s2">,</span><span class="s1">&quot;sourcesContent&quot;</span><span class="s2">:</span><span class="s0">[</span><span class="s1">&quot;import { createStore, applyMiddleware } from 'redux'</span><span class="s4">\n</span><span class="s1">import rootReducer from '../reducers'</span><span class="s4">\n</span><span class="s1">import { ping } from './enhancers/ping' // &lt;!-- подключаем наш enhancer</span><span class="s4">\n</span><span class="s1">import createLogger from 'redux-logger'</span><span class="s4">\n\n</span><span class="s1">export default function configureStore(initialState) {</span><span class="s4">\n</span><span class="s1">  const logger = createLogger();</span><span class="s4">\n</span><span class="s1">  const store = createStore(</span><span class="s4">\n</span><span class="s1">      rootReducer,</span><span class="s4">\n</span><span class="s1">      initialState,</span><span class="s4">\n</span><span class="s1">      applyMiddleware(ping), // &lt;!-- добавляем enhancer в цепочку middleware'ов</span><span class="s4">\n</span><span class="s1">      applyMiddleware(logger));</span><span class="s4">\n\n</span><span class="s1">  //A store holds the whole state tree of your application.</span><span class="s4">\n</span><span class="s1">  //The only way to change the state inside it is to dispatch an action on it.</span><span class="s4">\n</span><span class="s1">  //A store is not a class. It’s just an object with a few methods on it.</span><span class="s4">\n</span><span class="s1">  //To create it, pass your root reducing function to createStore.</span><span class="s4">\n</span><span class="s1">  //http://redux.js.org/docs/api/Store.html</span><span class="s4">\n\n</span><span class="s1">  //Store Methods</span><span class="s4">\n\n</span><span class="s1">//getState()</span><span class="s4">\n</span><span class="s1">//dispatch(action)</span><span class="s4">\n</span><span class="s1">//subscribe(listener)</span><span class="s4">\n</span><span class="s1">//replaceReducer(nextReducer)  Не используется в обычной среде</span><span class="s4">\n\n</span><span class="s1">  if (module.hot) {</span><span class="s4">\n</span><span class="s1">    module.hot.accept('../reducers', () =&gt; {  //module.hot.accept('../reducers', function () {</span><span class="s4">\n</span><span class="s1">      const nextRootReducer = require('../reducers');</span><span class="s4">\n</span><span class="s1">      store.replaceReducer(nextRootReducer);</span><span class="s4">\n</span><span class="s1">    });</span><span class="s4">\n</span><span class="s1">  }</span><span class="s4">\n\n</span><span class="s1">  return store;</span><span class="s4">\n</span><span class="s1">}&quot;</span><span class="s0">]}</span></pre>
+</body>
+</html>
