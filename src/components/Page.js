@@ -9,7 +9,7 @@ export default class Page extends Component {
     return <div>
       <p>
         <button onClick={this.onYearBtnClick.bind(this)}>2016</button>
-        <button onClick={::this.onYearBtnClick}>2015</button>
+        <button onClick={this.props.setYear.bind(this, 2015)}>2015</button>
         <button onClick={::this.onYearBtnClick}>2014</button>
       </p>
       <h3>{year} год</h3>
