@@ -8,8 +8,7 @@ export default function configureStore(initialState) {
   const store = createStore(
       rootReducer,
       initialState,
-      applyMiddleware(ping), // <!-- добавляем enhancer в цепочку middleware'ов
-      applyMiddleware(logger));
+      applyMiddleware(logger, ping));
 
   //A store holds the whole state tree of your application.
   //The only way to change the state inside it is to dispatch an action on it.
