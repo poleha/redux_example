@@ -13,7 +13,7 @@ export default function page(state = initialState, action) {
 
   switch (action.type) {
     case GET_PHOTOS_REQUEST:
-      return { ...state, loadind: true, year:action.payload, error: '' };
+      return { ...state, photos:[], loadind: true, year:action.payload, error: '' };
     case GET_PHOTOS_SUCCESS:
       return { ...state, photos: action.payload, loadind: false, error: '' };
     case GET_PHOTOS_FAILURE:

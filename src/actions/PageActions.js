@@ -41,7 +41,7 @@ export function getPhotos(year) {
         if (+year == 2014) {
 
         setTimeout(function () {
-            dispatch(getPhotosSuccess(['photo1', 'photo2', 'photo3']));
+            dispatch(getPhotosSuccess(['http://cs621931.vk.me/v621931175/23045/CVHsUC40OB8.jpg', 'http://cs621931.vk.me/v621931175/23045/CVHsUC40OB8.jpg']));
 
         }, 3000);
         }

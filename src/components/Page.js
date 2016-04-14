@@ -15,6 +15,19 @@ export default class Page extends Component {
       </p>
     }
 
+    let imagesBlock;
+    if (photos.length > 0) {
+    imagesBlock = photos.map((elem, index)=>{
+      return <p id={index}><img src={elem}></img></p>
+    });
+    }
+    else {
+      imagesBlock = ''
+    }
+
+
+
+
     let loadingBlock = "";
     if (loading) {
       loadingBlock = <p>
@@ -35,6 +48,7 @@ export default class Page extends Component {
       </p>
       {errorBlock}
       {loadingBlock}
+      {imagesBlock}
       <h3>{year} год</h3>
       {photoCountBlock}
     </div>
