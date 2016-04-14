@@ -5,6 +5,8 @@ export default class Page extends Component {
   render() {
     const { year, photos } = this.props.data;
     const getPhotos = this.props.actions.getPhotos;
+    const getPhotosCancel = this.props.actions.getPhotosCancel;
+    console.log(getPhotos, getPhotosCancel, '!!!!!!!!!!!!!!!!!!!!!')
     const error = this.props.data.error;
     const loading = this.props.data.loadind;
 
@@ -26,8 +28,6 @@ export default class Page extends Component {
     }
 
 
-
-
     let loadingBlock = "";
     if (loading) {
       loadingBlock = <p>
@@ -35,7 +35,13 @@ export default class Page extends Component {
       </p>
     }
 
-    let photoCountBlock = "";
+      let cancelBlock = "";
+      if (loading) {
+          cancelBlock = <input onClick={getPhotosCancel.bind(this)} type="button" value="Отменить"></input>
+      }
+
+
+      let photoCountBlock = "";
     if (!loading && !error) {
       photoCountBlock = <p>У тебя {photos.length} фото.</p>
     }
@@ -49,6 +55,7 @@ export default class Page extends Component {
       {errorBlock}
       {loadingBlock}
       {imagesBlock}
+        {cancelBlock}
       <h3>{year} год</h3>
       {photoCountBlock}
     </div>

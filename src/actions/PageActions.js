@@ -1,7 +1,7 @@
-import { GET_PHOTOS_REQUEST, GET_PHOTOS_SUCCESS, GET_PHOTOS_FAILURE } from '../constants/Page'
+import { GET_PHOTOS_REQUEST, GET_PHOTOS_SUCCESS, GET_PHOTOS_FAILURE, GET_PHOTOS_CANCEL } from '../constants/Page'
 
 
-
+var timeoutId;
 
 export function getPhotosRequest(year) {
 
@@ -31,6 +31,17 @@ export function getPhotosFailure(error) {
 }
 
 
+export function getPhotosCancel() {
+    clearTimeout(timeoutId);
+    //Тут мы будем отменять ajax запрос.
+    return {
+        type: GET_PHOTOS_CANCEL,
+        payload: 'Загрузка отменена'
+    }
+
+}
+
+
 export function getPhotos(year) {
 
     return function (dispatch, getState) {
@@ -38,20 +49,20 @@ export function getPhotos(year) {
 
          dispatch( getPhotosRequest(year));
 
+
         if (+year == 2014) {
 
-        setTimeout(function () {
+        timeoutId = setTimeout(function () {
             dispatch(getPhotosSuccess(['http://cs621931.vk.me/v621931175/23045/CVHsUC40OB8.jpg', 'http://cs621931.vk.me/v621931175/23045/CVHsUC40OB8.jpg']));
 
         }, 3000);
         }
         else {
-            setTimeout(function () {
-                dispatch(getPhotosFailure('Ошибочка вышла'));
+            timeoutId = setTimeout(function () {
+                    dispatch(getPhotosFailure('Ошибочка вышла'));
 
             }, 3000);
         }
-
 
 
 

@@ -1,4 +1,4 @@
-import { GET_PHOTOS_REQUEST, GET_PHOTOS_SUCCESS, GET_PHOTOS_FAILURE } from '../constants/Page'
+import { GET_PHOTOS_REQUEST, GET_PHOTOS_SUCCESS, GET_PHOTOS_FAILURE, GET_PHOTOS_CANCEL } from '../constants/Page'
 
 const initialState = {
   year: 2016,
@@ -18,6 +18,8 @@ export default function page(state = initialState, action) {
       return { ...state, photos: action.payload, loadind: false, error: '' };
     case GET_PHOTOS_FAILURE:
       return { ...state, photos: [], error: action.payload, loadind:false };
+    case GET_PHOTOS_CANCEL:
+          return { ...state, photos: [], error: 'Загрузка отменена', loadind:false };
 
     default:
       return state;
